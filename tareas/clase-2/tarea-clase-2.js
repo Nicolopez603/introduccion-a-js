@@ -20,25 +20,51 @@
 
 function sumar(numero1, numero2) {
     return numero1 + numero2;
-}
-
-function restar(numero1, numero2) {
+  }
+  
+  function restar(numero1, numero2) {
     return numero1 - numero2;
-}
-
-const operador = prompt('Ingrese + o -');
-const numero1 = 1;
-const numero2 = 2;
-
-let resultado;
-if (operador === '+') {
-    resultado = sumar(numero1, numero2);
-} else {
-    resultado = restar(numero1, numero2);
-}
-
-//https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
-console.log(
-    `El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`
-);
-
+  }
+  
+  const numero1 = 10;
+  const numero2 = 20;
+  
+  
+  // TAREA: Creemos 2 funciones más: dividir y multiplicar.
+  
+  function dividir(numero1, numero2){
+    return numero1 / numero2
+  }
+  
+  function multiplicar(numero1, numero2){
+    return numero1 * numero2
+  }
+  
+  const operador = prompt('Ingrese el operador que desea (- , * , / , +)')
+  
+  
+  
+  
+  // TAREA: Reescribamos el if-else que teníamos y extendámolos, agregando:
+  //       'else if' el 'operador' es igual a '-' - llamar a la función 'restar'
+  //       'else if' el 'operador' es igual a '/' - llamar a la función 'dividir'.
+  //       'else if' el 'operador' es igual a '*' - llamar a la función 'multiplicar'.
+  //       else console.log - "Perdón, no conozco ese operador".
+  
+  
+  
+  let resultado;
+  
+  if (operador === "+") {
+    resultado = sumar(numero1,numero2);
+  } else if(operador === '-'){
+    resultado = restar(numero1,numero2);
+  } else if(operador === '*'){
+    resultado = multiplicar(numero1,numero2)
+  } else if(operador === '/') {
+    resultado = dividir(numero1,numero2);
+  }else{
+    console.log('Perdon, no conozco ese operador');
+  }
+  
+  console.log(`${numero1}` + `${operador}` + `${numero2}` + ' es igual a ' + `${resultado}` )
