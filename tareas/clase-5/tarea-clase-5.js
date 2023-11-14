@@ -6,7 +6,7 @@ Cosas a tener en cuenta:
 También pueden usar .textContent, las diferencias no son importantes por ahora.
 
 3. Para evitar que el formulario <form> se “mande” y por ende recargue la página,
-al event handler “onclick”, agréguentle un return false; al final de la función.
+al event handler “onclick”, agréguenle un return false; al final de la función.
 
 Ejemplo:
 const $botonCalcular = document.querySelector("#boton-calcular");
@@ -17,10 +17,30 @@ $botonCalcular.onclick = function()
 }
 */
 
-//TAREA: completar tareas/clase-5/index.html para que incluya tarea-clase-5.js
-//TAREA: crear un formulario donde un usuario pueda ingresar su salario anual.
+//TAREA: completar tareas/clase-5/index.html para que incluya tarea-clase-5.js -
+//TAREA: crear un formulario donde un usuario pueda ingresar su salario anual. -
 //cuando el usuario haga click en el botón "calcular", mostrar el salario mensual
 // en una caja de texto deshabilitada. --> <input type="text" disabled id="salario-mensual"/>
+const $btnCalculate = document.querySelector('#btn-calculate-salary')
+
+function calculateMonthlySalary(annualSalary){
+    const MONTHS_IN_A_YEAR = 12
+
+    return annualSalary / MONTHS_IN_A_YEAR
+  }
+
+
+
+
+$btnCalculate.onclick = function () {
+
+const annualSalary = Number(document.querySelector('#annual-salary').value)
+const monthlySalary = calculateMonthlySalary(annualSalary);
+
+document.querySelector('#monthly-salary').value = monthlySalary;
+
+return false;
+}
 
 //TAREA: En otro archivo html (no Index) y otro archivo js (no tarea-clase-5.js),
 // creá un formulario que capture el primer nombre, segundo nombre, apellido/s y edad del usuario
