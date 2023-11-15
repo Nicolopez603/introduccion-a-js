@@ -1,21 +1,37 @@
 <!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Clase 5</title>
 </head>
+<h1> Welcome to the bar! </h1>
+
 <body>
-    <form>
-        <label for="salario-anual">Salario anual:</label>
-        <input type="number" id="salario-anual" placeholder="Ej.: 100000"/>
-        <label for="salario-anual">Salario mensual:</label>
-        <input type="number" disabled id="salario-mensual"/>
-        <button type="button" id="calcular-salario-mensual">Calcular</button>
-        <button type="reset">Limpiar</button>
+
+    <form id="form-bar">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="first-name" name="firstName">
+
+        <label for="secondName">Second Name:</label>
+        <input type="text" id="second-name" name="secondName">
+
+        <label for="lastname">Last Name/s:</label>
+        <input type="text" id="last-name" name="lastName">
+
+        <label for="age">Age:</label>
+        <input type="text" id="age-user" name="ageUser">
+
+        <button type="button" onclick="showInformation()">Show information</button>
     </form>
-    <script type="text/javascript" src="tarea1.js"></script>
+
+    <h1 id="welcome">Welcome!</h1>
+    <textarea id="fieldText" readonly></textarea>
+
+    <script src="tarea1.js"></script>
 </body>
+
 </html>
